@@ -1,0 +1,44 @@
+<h2>Sumador con Servicios</h2>
+<blockquote class="text-center">
+<div>
+    <mat-form-field>
+        <input matNativeControl type="number" placeholder="Ingrese un valor a" id="val1" [(ngModel)]="val1"> 
+    </mat-form-field>
+</div>
+<div>
+    <mat-form-field>
+        <input matNativeControl type="number" placeholder="Ingrese un valor b" id="val2" [(ngModel)]="val2">
+    </mat-form-field> 
+</div>
+<br>
+<div>
+    El Resultado es = {{rta}} 
+</div>
+<br>
+    <div class="btn-group btn-group-lg block">
+        <button mat-stroked-button color="primary" (click)="op1()">Suma</button>
+        <button mat-stroked-button color="accent" (click)="op2()">Resta</button>
+        <button mat-stroked-button color='warn' (click)="op3()">Multiplicar</button>
+        <button mat-stroked-button color="basic" (click)="op4()">Dividir</button>
+    </div> 
+</blockquote>
+
+<h2>¿Como hacemos uso de servicios?</h2>
+<blockquote class="text-center"> 
+    <p> 
+        Una vez generado nuestro proyecto con ng new "Nombre del proyecto", podemos generar servicios externos o lejanos
+        ¿Como se generan?, pues simplemente con hacer un ng g s se generarian dos ficheros uno con extensión .ts y otro
+        con extensión .spect.ts. Solo trabajaremos con el .ts.
+    </p>
+    <br>
+    <p>
+        En el fichero .ts de base hay que realizar lo siguiente: importar el servicio generado anteriormente, añadir en @Component 
+        un apartado nuevo llamado providers : ["Nombre del servicio creado"] y para terminar solo faltaría que en el constructor
+        hagamos lo siguiente constructor(private "Nombre que queramos": "Nombre del servicio que hemos importado arriba").
+    </p>
+    <p>
+        Una vez realizado los pasos anterirores ya podremos llamar a los métodos del servicio que generemos, pero todavía nos falta
+        un pequeño paso. ¿Cual es? ==> Hay que añadir en el .ts que hemos generado el @Injectable y una vez generado esto podremos 
+        trabajar con comodidad.
+    </p>
+</blockquote> 
